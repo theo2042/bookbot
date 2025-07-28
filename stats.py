@@ -17,5 +17,17 @@ def book_string(book_contents):
 
     return count_dict
 
+def sort_chars(char_count):
+    unsorted_list = []
+    for key, value in char_count:
+        unsorted_list[key] = value
+
+    print(unsorted_list)
+    sorted_list = unsorted_list.sort()
+
+    return sorted_list
+
+
+
 
     

@@ -13,12 +13,16 @@ def get_book_text(filepath):
 
 def main():
     book_contents = get_book_text("books/frankenstein.txt")
-    print(book_contents)
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
     count_words_text = num_words(book_contents)
-    print(f"{count_words_text} words found in the document")
-    print(book_string)
+    print("----------- Word Count ----------")
+    print(f"Found {count_words_text} total words")
+    print("--------- Character Count -------")
     converted_to_strings = book_string(book_contents)
     print(converted_to_strings)
+
+    
 main()
 
 
