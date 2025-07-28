@@ -1,5 +1,6 @@
 from stats import num_words
 from stats import book_string
+from stats import sort_chars
 
 def get_book_text(filepath):
     #takes a filepath as input and returns the contents of the file as a string.
@@ -20,9 +21,11 @@ def main():
     print(f"Found {count_words_text} total words")
     print("--------- Character Count -------")
     converted_to_strings = book_string(book_contents)
-    print(converted_to_strings)
-
+    sorted_chars = sort_chars(converted_to_strings)
+    print(sorted_chars)
     
+
+
 main()
 
 
