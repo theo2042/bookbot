@@ -6,7 +6,7 @@ def num_words(count_words):
     return word_count
 
 def book_string(book_contents):
-    print("Import file working")
+    
     lower_case_chars = book_contents.lower()
     count_dict = {}
     for i in lower_case_chars:
@@ -19,13 +19,11 @@ def book_string(book_contents):
 
 def sort_chars(char_count):
     unsorted_list = []
-    for key, value in char_count:
-        unsorted_list[key] = value
+    for k, v in char_count.items():
+        unsorted_list.append({"char":k,"num":v})
 
-    print(unsorted_list)
-    sorted_list = unsorted_list.sort()
-
-    return sorted_list
+    unsorted_list.sort(key=lambda item: item["num"], reverse=True)
+    return unsorted_list
 
 
 

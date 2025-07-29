@@ -21,9 +21,13 @@ def main():
     print(f"Found {count_words_text} total words")
     print("--------- Character Count -------")
     converted_to_strings = book_string(book_contents)
-    sorted_chars = sort_chars(converted_to_strings)
-    print(sorted_chars)
     
+    sorted_chars = sort_chars(converted_to_strings)
+    sorted_alpha = []
+    for item in sorted_chars:
+        if item["char"].isalpha():
+            print(f"{item['char']}: {item['num']}")
+    print("============= END ===============")
 
 
 main()
